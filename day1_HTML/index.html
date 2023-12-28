@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--meta는 empty-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDT 11기 </title>
+</head>
+<body>
+    <!--div 태그는 블럭 태그로서 한줄의 영역을 차지-->
+    <!--블럭 태그는 한줄을 차지하는 태그 -->
+    <div>Hello World!!!</div>
+    <div>안녕하세요.</div>
+    <!--h1부터 h6까지 폰트 사이즈가 점직적으로 작아지고 알아서 줄바꿈-->
+    <h1>heading</h1>
+    <h2>heading</h2>
+    <h3>heading</h3>
+    <h4>heading</h4>
+    <h5>heading</h5>
+    <h6>heading</h6>
+    <!--한 줄 긋기-->
+    <hr>
+    <!--p태그는 글작성 div 태그랑 크게 다르지 않고 문장을 쓰는 곳, 앞 뒤 줄 띄어쓰기에 좋음-->
+    <!--br태그는 줄바꿈하는 태그 -->
+    <p>안녕하세요,<br> 저는 김지혜입니다.</p>
+    <!--hr 태그는 한줄 그어주는 태그-->
+    <hr>
+    <!--ul태그는 순서 없는 목록 li태그는 ul/ol 태그 안에 포함되는 항목 태그-->
+    <ul>
+        <li>사과</li>
+        <li>바나나 </li>
+        <li>치킨</li>
+    </ul>
+    <!--hr은 빈요소, 속성만 존재-->
+    <hr>
+    <!--ul태그에서 앞에 점을 다른 거로 바꿔주는 것 ; 속성 변경 
+        ul태그 속성(마커종류) : disc, square, none, circle-->
+    <ul type="square">
+        <li>사과</li>
+        <li>바나나 </li>
+        <li>치킨</li>
+    </ul>
+    <hr>
+    <!--ol태그는 순서 있는 목록 마찬가지로 li 태그로 항목 태그해주기-->
+    <ol>
+        <li>1번</li>
+        <li>2번</li>
+    </ol>
+    <hr>
+    <!--ol태그 속성 변경
+        ol태그 속성(순번모양) : 1, A, a, I, i 
+        start:시작번호
+        reversed:역순으로-->
+    <ol type="1", start="10", reversed>
+        <li>1번</li>
+        <li>2번</li>
+    </ol>
+    <hr>
+    <!--li와 ol은 중첩관계 가능 -->
+    <ul type="square">
+        <li>
+            <ol>
+                <li><b>개나리</b></li>
+                <li><strong>진달래</strong></li>
+                <li><i>붓꽃</i></li>
+            </ol>
+        </li>
+        <li>
+            <ol>
+                <li><em>개나리2</em></li>
+                <li><u>진달래2</u></li>
+                <li><del>붓꽃2</del></li>
+            </ol>
+        </li>
+    </ul>
+    <!--이미지태그 src는 내가 원하는 이미지
+        마지막에 컨텐츠 추가할 필요 없음-->
+    <img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fdiscovercrop-phinf.pstatic.net%2F%2FMjAyMzEyMjJfMjYy%2FMDAxNzAzMjUwNjAyMzQ4.NExnZWvrzv-qM2-sTZb8VMjzxoTBKGlj7LcsamNcSO8g.Wy9wpmqzMzI_ZywDkPsmMRCvJTa8wAMGpf3xVHAR53Mg.JPEG%2Fimage_374x246.jpg%22&type=nf365_240&service=navermain" alt />
+    <!--a태그 : 페이지로 이동 
+        inline태그다. -> 영역이 없다 (블럭태그와 반대되는 개념)
+        중간에 컨텐츠가 들어가야 누르면 그 주소로 이동
+        div(블럭태그)는 한줄을 전부 포함하는 태그이므로 한줄 안에 하이퍼링크 버튼도 포함됨 -->
+     
+    <div>
+        <a href="https://www.naver.com/" target="blank">네이버</a>
+    </div>
+    <!--상대경로-->
+    <div>
+        <a href="/practice.html" target="blank">practice</a>
+    </div>
+    <!--이럴 경우에는 모든 하이퍼링크 버튼이 한줄 안에 포함되겠죠?-->
+    <div>
+        <a href="https://www.naver.com/" target="blank">이동1</a>
+        <a href="https://www.naver.com/" target="blank">이동2</a>
+        <a href="https://www.naver.com/" target="blank">이동3</a>
+    </div>
+    <!--span태그는 영역이 없는 태그지만 영역 안에서 또 다른 영역을 구분지을 때 사용-->
+    <div>
+        <span style="color: red;">안녕하세요.</span><span>반갑습니다.</span>
+    </div>
+    <hr />
+    <!--Form 태그 :input태크를 담는 역할, 
+        서버로 input의 데이터(value)를 전송시키는 역할-->
+    <form>
+        <!---input태그 형식 : 중간에 콘텐츠 넣지 않고 type서술하는 것-->
+        <input type="button" value="전송" />
+        <!--기본값:submit이 되는 것, 누르면 백엔드로 데이터 전송-->
+        <button type="submit">버튼</button>
+        <!--뭐라고 치는지 보이게
+        placeholder :사용자에게 어떤 걸 치면 되는지 안내해주는 역할
+        value에 hi를 넣어놓으면 text 칸 안에 default로 hi가 입력되어 있다.
+        readonly는 치지는 못하지만 서버로 전송은 한다.-->
+        <input type="text" placeholder="이름" value="hi" readonly /><br />
+        <!--뭐라고 치는지 안보이게-->
+        <input type="password" placeholder="비밀번호" /><br />
+        <!--value는 백엔드로 전송하는 값
+            food라는 체크박스에 묶여 있다. 
+            콘텐츠는 단순히 사용자에게 무슨 체크박스인가 서술하는 역할
+            checked는 미리 선택하도록 하는 것-->
+        <input type="checkbox" name="food" value="pizza" />피자<br />
+        <input type="checkbox" name="food" value="chicken" checked />치킨<br />
+        <!--무조건 하나를 선택해야 할 때는 radio 
+            선택하지 않아도 되거나 여러개를 선택해도 될때는 checkbox-->
+        <!--이렇게 되면 hobby라는 체크박스 에 묶인 3개의 항목 중 한개 선택 가능-->
+        <input type="radio" name="hobby" value="camping" />캠핑<br />
+        <!--보여만 주고 싶고 선택은 못하게 하려면 & 서버로 송신도 안되게 disalbed-->
+        <input type="radio" name="hobby" value="hiking" disabled/>하이킹<br />
+        <input type="radio" name="hobby" value="swimming" />수영<br />
+        <input type="date" /><br />
+        <input type="time" /><br />
+        <!--년/월/일과 시간 모두 선택-->
+        <input type="datetime-local" /><br />
+        
+        <select>
+            <!--optgroup : 카테고리로 묶는 것-->
+            <optgroup label="ASIA">
+                <option>대한민국</option>
+                <option>일본</option>
+                <option>중국</option>
+                <!--disableds는 선택 못하게 하고 백엔드로 데이터 전송도 하지 않는다.-->
+                <option disabled>대만</option>
+            </optgroup>
+            <optgroup label="AMERICA">
+                <option>캐나다</option>
+                <option>미국</option>
+            </optgroup>
+            <!--카테고리 별로 묶지 않아도 무관-->
+            <option>마다카스카르</option>
+        </select>
+    </form>
+</body>
+</html>
