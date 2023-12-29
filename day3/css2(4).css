@@ -1,0 +1,13 @@
+/* 딸기 선택-span이 첫번째 자식 div 태그 작성하면 오류 */
+.fruits span:first-child{
+    color: red;
+}
+
+/* 사과 선택 */
+.fruits h3:last-child{
+    color: blueviolet;
+}
+/* 오렌지 선택 */
+.fruits *:nth-child(3){
+    color: orangered;
+}

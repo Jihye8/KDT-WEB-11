@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 기본 선택자</title>
+    <style>
+       /* 전체 선택자 */
+       *{
+            
+            color:rgb(255, 127, 197)
+        }
+
+    </style>
+    <style>
+        /* 태그 선택자
+        부모한테 속성을 주문 자식들도 속성을 받는다. */
+        ul{
+            background-color: beige;
+        }
+        /* class선택자
+        class는 html 모든 요소에 작성이 가능하다.  */
+        .orange{
+            font-weight: bold;
+        }
+        .bgcolor{
+            background-color: green;
+        }
+        /* id선택자 */
+        #orange_font{
+                font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>사과</li>
+            <li>딸기</li>
+            <!-- class 다수로 선택가능 -->
+            <li id="orange_font" class="orange bgcolor">오렌지</li>
+        </ul>
+            <div>당근</div>
+            <p>토마토</p>
+            <span>오렌지</span>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+.stirpes{
+    width: 100px;
+}
+.stirpes *:nth-child(2n+1){
+    background-color: navy;
+    color: white;
+}
+.stirpes *:nth-child(2n){
+    background-color:yellow;
+}

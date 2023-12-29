@@ -1,0 +1,10 @@
+ul > .orange{
+    color: orange;
+}
+.orange + li{
+    color: pink;
+}
+
+.fruit ~ li{
+    color: aqua;
+}

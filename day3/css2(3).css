@@ -1,0 +1,9 @@
+a:hover{
+    color: blueviolet;
+}
+a:active{
+    color: blue;
+}
+input:focus{
+    color:aqua
+}

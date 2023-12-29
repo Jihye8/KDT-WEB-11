@@ -1,0 +1,11 @@
+h1:hover{
+    color: red;
+    /* 커서가 포인터로 바뀜 손가락모양 */
+    cursor: grab;
+}
+a:active{
+    background-color: blue;
+}
+input:focus{
+    background-color: orange;
+}
