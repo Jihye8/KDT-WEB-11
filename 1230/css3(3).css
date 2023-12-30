@@ -1,0 +1,22 @@
+.main > div{
+    display: inline-block;
+    /*display : 화면에 어떻게 요소들을 보여줄지 나타내는 것*/
+    /* 어떤 박스 모델을 사용할지 뒤에 적으면 됨. */
+    width: 100px;
+    height: 100px;
+    
+    margin: 20px;
+}
+.main{
+    /* margin: 50px; */ 
+    /* margin: 20px 50px; */
+    /* margin: 20px 40px 100px; */
+    margin: 10px 30px 50px 70px;
+    /* border: solid 2px rebeccapurple; */
+    border: solid 3px palevioletred;
+    padding: 20px
+}
+
+/* span{
+    display: inline-block;
+} */

@@ -1,0 +1,9 @@
+.text{
+    width: 300px;
+    text-align: justify;
+    text-decoration: underline;
+}
+/* text-align는 문자 정렬 */
+/* justify는 양쪽 정렬 */
+/* center, left, right  */
+/* text-decoration는 선 긋기(위, 아래, 가운데) */

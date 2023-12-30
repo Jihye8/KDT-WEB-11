@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'GapyeongHanseokbong-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongHanseokbong-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.content1{
+    color: red;
+    font-size: 23px;
+    line-height: 46px;
+    font-weight: 300;
+}
+.content2{
+    color: blue;
+    font-size: 23px;
+    line-height: 46px;
+    font-weight: 700;
+}
