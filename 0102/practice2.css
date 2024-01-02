@@ -1,0 +1,19 @@
+.box1{
+    
+    width: 50vh;
+    height: 50vh;
+    border-style:dotted solid dashed double ;
+    border-width: 10px 20px 30px 40px;
+    border-color: red black blanchedalmond lightcoral;
+    border-radius: 50%;
+}
+.box2{
+    width: 50vh;
+    height: 50vh;
+    border-top-style:dashed;
+    border-left-style: dotted;
+    border-right-style: groove;
+    border-bottom-style: solid;
+    border-color: aqua;
+    border-radius: 10% 20% 30% 40%;
+}

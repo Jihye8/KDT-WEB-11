@@ -1,0 +1,10 @@
+.main{
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+   /* 벗어난 만큼 잘라버리기 */
+    /* overflow: hidden; */
+   /* 최근 브라우저 sroll 설정은 auto와 동일하다 */
+   /* auto : 부모 영역을 넘어갈 때만 스크롤이 생성된다.  */
+    overflow: auto;
+}

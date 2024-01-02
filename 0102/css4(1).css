@@ -1,0 +1,19 @@
+.bgColor{
+    background-color: aqua;
+    /* width: 500px; */
+    /* height: 500px; */
+    /* max-width: 500px;
+    max-height: 500px; */
+    /* 최대 500까지만 가능하니까 굳이 그것보다 작을 때는 칠해지지 않는다. */
+    /* min-width: 500px;
+    min-height: 500px; */
+    /* 500이하로 줄지 않는다. */
+    min-width: calc(500px - 50%);
+    반 줄어들면 더 이상 줄지 않는다. 
+    
+}
+
+p{
+    line-height: 30px;
+    /* 글자 간의 간격 */
+}

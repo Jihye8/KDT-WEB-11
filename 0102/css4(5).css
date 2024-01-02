@@ -1,0 +1,24 @@
+.parent{
+    background-color: plum ;
+    width: 300px;
+    height: 300px;
+}
+.box1{
+    background-color: powderblue;
+    width: 100px;
+    height: 80px;
+}
+.box2{
+    background-color: yellowgreen;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border-radius: 50%;
+}
+.box3{
+    background-color: royalblue;
+    width: 30px;
+    height: 30px;
+}

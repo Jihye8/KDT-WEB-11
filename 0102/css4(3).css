@@ -1,0 +1,31 @@
+/* div{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border: 15px solid red;
+    background-color: orange;
+} */
+.contentbox{
+    box-sizing: content-box;
+}
+.borderbox{
+    box-sizing: border-box;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+}
+.invisible{
+    visibility: hidden;
+    background-color: red;
+}
+.d-none{
+    display: none;
+    background-color: aquamarine;
+}
+.opacity-0{
+    opacity: 0;
+    background-color: plum;
+}

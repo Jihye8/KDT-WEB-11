@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-color: blueviolet;
+    height: 100vh;
+}
+.box{
+    width: calc(100vw / 10); 
+    /* 전체에서 10 % */
+    height: calc(100vw / 10);
+    background-color: blue;
+    margin: auto;
+    text-align: center;
+    line-height: calc(100vw / 10);
+    margin: auto;
+    margin-top: calc(50vh - (100vh / 20));
+    /* 높이 50%에서 전체100vw를 20으로 나누면 전체의5%  */
+ }
