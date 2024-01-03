@@ -1,0 +1,24 @@
+.bk{ 
+    background-color: skyblue;
+    /* position: relative; */
+    padding: 30px;
+    width: 100vw;
+    height: 100vh;
+
+}
+.main{
+    background-color:seashell;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 10%;
+    padding: 50px;
+    border : 3px double silver;
+    box-sizing :border-box;
+    margin: auto;
+}
+#name:focus{
+    background-color: beige;
+}
+#email:focus{
+    background-color: beige;
+}

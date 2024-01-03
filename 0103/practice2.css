@@ -1,0 +1,65 @@
+.main{
+    position: relative;
+    margin: auto;
+}
+.body{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.b1{
+    background-color: rgba(35, 106, 228, 0.879);
+    z-index: 1;
+    
+}
+.b2{
+    background-color: rgb(0, 0, 255);
+    top: 30px;
+    left: 70px;
+    z-index: 2;
+}
+.b3{
+    background-color: rgb(0, 179, 255);
+    top: 70px;
+    left:100px;
+    z-index: 3;
+    
+}
+.b4{
+    background-color: skyblue;
+    top: 65px;
+    left: 150px;
+    z-index: 4;
+}
+.b5{
+    background-color: rgb(0, 128, 117);
+    top: 63px;
+    left: 210px;
+    z-index: 600;
+}
+.face{
+    border-radius: 50%;
+    position: absolute;
+}
+.f1{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.f2{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    top: 22px;
+    left: 20px;
+    z-index: 200;
+}
+.grass{
+    position: absolute;
+    top: 90px;
+    z-index: 300;
+}

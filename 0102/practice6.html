@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <link rel="stylesheet" href="practice6.css">
+</head>
+<body>
+    <h1>실습.설문조사 폼 꾸미기</h1>
+    <br>
+    <div class="bk">
+        <div class="main">
+
+            <form>
+                <h3>설문조사</h3>
+                <label for="name">이름</label>
+                <input type="text" placeholder="이름" id="name"><br>
+                <label for="email">이메일</label>
+                <input type="email" placeholder="love@example.com" id="email">
+                <h4>나이</h4>
+                <input type="radio" name="age">10대
+                <input type="radio" name="age">20대 
+                <input type="radio" name="age">30대 
+                <input type="radio" name="age">40대 
+                <input type="radio" name="age">50대 
+                <input type="radio" name="age">60대 이상
+        
+                <h4>원하는 강의(복수응답가능합니다.)</h4>
+                <input type="checkbox" name="lecture">html
+                <input type="checkbox" name="lecture">javascript
+                <input type="checkbox" name="lecture">css
+                <br><br>
+                <textarea rows="10" cols="80" placeholder="하고 싶은 말을 써주세요 :)"></textarea>
+                <input type="button" value="제출" />
+        
+        
+            </form>
+
+        </div>
+        
+    </div>
+</body>
+</html>

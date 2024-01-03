@@ -1,0 +1,44 @@
+.main{
+    position: relative;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle1{
+    background-color: red;
+    top: 10px;
+    left: 10px;
+}
+.eye-white{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+
+}
+.eye-black{
+    position: relative;
+}
+.circle2{
+    background-color: orange;
+    top: 10px;
+    left: 10px;
+}
+.circle3{
+    background-color: greenyellow;
+    top: 10px;
+    left: 10px;
+}
+.circle4{
+    background-color: skyblue;
+    top: 10px;
+    left: 10px;
+}
+.circle5{
+    background-color: plum;
+    top: 10px;
+    left: 10px;
+}

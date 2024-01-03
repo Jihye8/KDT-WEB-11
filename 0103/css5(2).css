@@ -1,0 +1,18 @@
+.grad{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+.grad-1{
+    background: linear-gradient(gray, tomato);
+}
+.grad-2{
+    background: linear-gradient(90deg, yellow, skyblue);
+}  
+.grad-3{
+    background: linear-gradient(90deg, lightblue 80%,yellow, lightpink);
+}  
+.grad-4{
+    background: linear-gradient(in hsl,blue, red );
+}  
+

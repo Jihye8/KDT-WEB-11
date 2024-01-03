@@ -1,0 +1,23 @@
+div{
+    background-color: orange;
+    /* background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a); */
+    background-image: url(pine-hills-8419433_1920.jpg);
+    width: 100vw;
+    height: 100vh;
+    /* background-repeat의 기본값은 반복 */
+     background-repeat: no-repeat;
+    /* 반복 없음 */
+    /* background-repeat: repeat-x;
+    x축만 반복 */
+    /* background-repeat: repeat-y;
+    y축만 반복 */
+    background-position: bottom left;
+    /* 중앙 */
+    background-size: cover;
+    /* 배경 이미지 스크롤 설정 */
+    background-attachment: scroll ;
+    
+}
+p{
+    height: 1000px;
+}
