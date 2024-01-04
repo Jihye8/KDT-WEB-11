@@ -1,0 +1,43 @@
+.main{
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: plum;
+    position: absolute;
+
+    animation-name: ball;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes ball{
+    0%{
+        /* 0이여도 써줘야 애니메이션 효과가 자연스럽게 진행될 수 있다. */
+        left: 0px;
+        top:0px;
+    }
+    25%{
+        left:500px;
+        top: 0px;
+
+    }
+    50%{
+        left: 500px;
+        top:500px ;
+    }
+    75%{
+        left: 0px;
+        top: 500px;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+
+    }
+}

@@ -1,0 +1,23 @@
+.main{
+    width: 300px;
+    height: 300px;
+    background-color: plum;
+}
+img{
+    width: 300px;
+    height: 300px;
+/* translate : 이동 
+    transform: translate(50px, 50px);
+    /* transform: translateX(70px); */
+    /* transform: translateY(10px);
+    transform: translateX(-70px); */ 
+    /* scale : 크기 조절 */
+    /* transform: scale(2);
+    transform: scaleX(2);
+    transform : scaleY(2) */
+    /* rotate : 회전 */
+    /* transform: rotate(각도); */
+    /* transform: rotateX('angle');
+    transform:rotateY('angle') */
+    /* skew : 기울임 */
+}

@@ -2,6 +2,7 @@
     width: 500px;
     height: 500px;
     background-color: antiquewhite;
+    /* flex를 하게 되면 자식 요소가 inline요소로 변하게 된다. */
     display: flex;
     /* flex-direction: column;  */
     /* flex-direction은 x축과 y축 시작축을 지정;
@@ -10,7 +11,8 @@
      */
      /* justify-content:center; */
      flex-wrap: wrap;
-     align-items: flex-start;
+     /* align-items: center; */
+     align-content: center;
     
     
 }

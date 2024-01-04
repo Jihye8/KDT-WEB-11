@@ -1,0 +1,108 @@
+.header{
+    width: vw;
+    height: 50px;
+    background-color: rgba(190, 186, 186, 0.485);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    /* padding을 주면 늘어난다.  */
+}
+.logo{
+    margin-left: 50px;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end; 
+    width: 30px;
+}
+.menu1{  
+   margin-right: 50px;
+}
+.menu2{   
+    margin-right:50px ;
+}
+.menu3{
+    margin-right:50px ;
+}
+.header2{
+    width: vw;
+    height: 50px;
+    background-color: rgba(190, 186, 186, 0.485);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+}
+.menu2-1{
+    margin-left: 40px;
+}
+.menu2-3{
+    margin-right: 40px;
+}
+.header3{
+    width: vw;
+    height: 50px;
+    background-color: rgba(190, 186, 186, 0.485);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.thirdmenu{
+    display: flex;
+}
+.menu3-1{
+    margin: 25px;
+}
+.menu3-2{
+    margin: 25px;
+}
+.menu3-3{
+    margin: 25px;
+}
+.logo2{
+    margin-left: 40px;
+}
+.login{
+    margin-right: 40px;
+}
+.header4{
+    width: vw;
+    height: 50px;
+    background-color: rgba(190, 186, 186, 0.485);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.logo3{
+    display: flex;
+    align-items: center;
+}
+.logo3-1{
+    margin-left:40px;
+    margin-right:25px
+}
+.menu4-1{
+    margin:25px;  
+}
+.menu4-2{
+    margin:25px;  
+}
+.menu4-3{
+    margin:25px;  
+}
+.etc{
+    display: flex;
+}
+.signup{
+    margin-right: 40px;
+}
+.login2{
+    margin-right: 25px;
+}
+
+
+
+

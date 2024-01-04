@@ -1,0 +1,42 @@
+.box{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.box1:hover{
+    width: 400px;
+    background-color: blue;
+    opacity: 0.5;
+    transition-duration:1s ;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+}
+.box2:hover{
+    transform: rotate(180deg);
+    background-color: green;
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+}
+.box3:hover{
+    background-color: blueviolet;
+    transform: scale(3) translate(100px, 100px);
+    transition: all 3s ease-in-out;
+}
+.box4:hover{
+    background-color: palegoldenrod;
+    box-shadow: 4px 4px 10px #000800;
+    transform: translate(-5px,-15px);
+    transition: all 0.2s ease-in;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color: blueviolet;
+}
+.box3{
+    background-color: chartreuse;
+}
+.box4{
+    background-color: cornflowerblue;
+}
