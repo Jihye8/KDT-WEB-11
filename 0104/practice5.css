@@ -1,0 +1,24 @@
+.main{
+    width: vw;
+    height: vh;
+    position: relative;
+
+    animation-name: myani;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    
+}
+
+@keyframes myani{
+    0%{
+        left: 100%;
+        width: 300%;
+    }
+    
+    100%{
+        left:0%;
+        width: 100%;
+    }
+}
