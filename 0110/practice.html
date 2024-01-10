@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+        <style>
+            .main {
+                width: 500px;
+                height: 500px;
+                border: 3px solid grey;
+                border-radius: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .picture {
+                width: 300px;
+                height: 300px;
+                border: 1px solid gainsboro;
+            }
+            .button {
+                display: flex;
+                /* width: 50px; */
+                /* height: 50px; */
+                justify-content: center;
+                align-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="picture"></div>
+
+            <form class="button">
+                <button type="button" onclick="banana()">banana</button>
+                <button type="button" onclick="apple()">apple</button>
+                <button type="button" onclick="grape()">grape</button>
+                <button type="button" onclick="peach()">peach</button>
+            </form>
+        </div>
+        <script>
+            function banana() {
+                $('.picture').empty();
+                $('.picture').prepend('<img src="banana.jpg" alt="banana">');
+                console.log('바나나 그림 추가 완료');
+            }
+            function apple() {
+                $('.picture').empty();
+                $('.picture').prepend('<img src="apple.jpg" alt="apple">');
+                console.log('사과 그림 추가 완료');
+            }
+            function grape() {
+                $('.picture').empty();
+                $('.picture').prepend('<img src="grape.jpg" alt="grape">');
+                console.log('포도 그림 추가 완료');
+            }
+            function peach() {
+                $('.picture').empty();
+                $('.picture').prepend('<img src="peach.jpg" alt="peach">');
+                console.log('복숭아 그림 추가 완료');
+            }
+        </script>
+    </body>
+</html>

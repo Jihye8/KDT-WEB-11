@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" id="button">클릭</button>
+        <form>
+            <button id="default">클릭2</button>
+            <input type="text" id="input" />
+        </form>
+        <script>
+            const button = document.getElementById('button');
+            const def = document.getElementById('default');
+            const input = document.getElementById('input');
+
+            button.addEventListener('click', function (event) {
+                console.log(event.target);
+                event.preventDefault;
+                alert('안녕!');
+            });
+            input.addEventListener('m', function () {
+                console.log('focus');
+            });
+            input.addEventListener('blur', function (e) {
+                console.log('blur');
+            });
+
+            input.addEventListener('keydown', function () {
+                console.log('key');
+            });
+
+            //this
+            // 그 함수가 속해 있던 객체 참조
+            // '뭔가'를 클릭할 때 불러오는 함수(콜백함수)에서 this는 그 '뭔가'를 의미
+
+            def.addEventListener('click', function (event2) {
+                event2.preventDefault(); // 자동으로 submit되는 것을 방지한다.
+                console.log(this);
+                this.textContent = '클릭함';
+            });
+        </script>
+    </body>
+</html>

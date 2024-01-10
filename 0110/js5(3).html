@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <div id="hello">안녕하세요</div>
+        <h4>val()</h4>
+        <input type="text" /><br />
+        <button type="button" onclick="getValue()">값 가져오기</button>
+        <button type="button" onclick="setValue()">값 설정하기</button>
+
+        <h3>css()</h3>
+        <span>안녕</span>
+        <br />
+
+        <form>
+            <button type="button" onclick="changeCSsJs()">js로 바꾸기</button>
+            <button type="button" onclick="changeCssJquery()">
+                jquery로 바꾸기
+            </button>
+            <button type="button" onclick="getCssJquery()">
+                jquery로 css 가져오기
+            </button>
+            <hr />
+            <h4>attr()</h4>
+            <a href="https://www.naver.com/">이동하기</a>
+            <br />
+            <button type="button" onclick="changeAttrJs()">js로 바꾸기</button>
+            <button type="button" onclick="changeAttrJquery()">
+                Jquery로 바꾸기
+            </button>
+        </form>
+        <div class="html">안녕하세요</div>
+        <button type="button " onclick="changeHtmlJs()">js로 바꾸기</button>
+        <button type="button " onclick="changeHtmlJquery()">
+            jquery로 바꾸기
+        </button>
+        <hr />
+        <h4>요소 추가하기</h4>
+        <ul class="colors">
+            <li class="orange">orange</li>
+            <li class="green">green</li>
+            <li class="navy">navy</li>
+        </ul>
+        <h5>append() - 선택된 요소의 자식 중 마지막에 추가</h5>
+        <button type="button" onclick="appendJs()">js로 추가</button>
+        <button type="button" onclick="appendJq()">jq로 추가</button>
+        <hr />
+        <h5>prepend() - 선택된 요소의 자식 중 처음에 추가</h5>
+        <button type="button" onclick="prependJs()">js로 처음에추가</button>
+        <button type="button" onclick="prependJs()">jq로 처음에 추가</button>
+        <hr />
+        <h4>요소 삭제하기</h4>
+        <ul class="nums">
+            <li>1</li>
+            <li id="list2">2</li>
+            <li>3</li>
+        </ul>
+        <button type="button" onclick="removeJs()">js로 삭제</button>
+        <button type="button" onclick="removeJq()">jq로 삭제</button>
+        <hr />
+        <br />
+        <button type="button" onclick="emptyJs()">모두 삭제</button>
+        <button type="button" onclick="emptyJq()">모두 삭제</button>
+
+        <script src="js5(3).js"></script>
+    </body>
+</html>
