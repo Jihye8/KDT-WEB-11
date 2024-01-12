@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" href="calender.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="input">
+                <label for="inputDate">날짜 : </label>
+                <input type="text" class="inputDate" /><br />
+                <label for="inputContent">내용 : </label>
+                <input type="text" class="inputContent" />
+                <label for="submit"></label>
+                <input type="button" value="제출" onclick="submit()" />
+            </div>
+            <div class="calender">
+                <div class="header"></div>
+                <hr />
+                <div class="month">
+                    <div class="days">
+                        <div class="day">SUN</div>
+                        <div class="day">MON</div>
+                        <div class="day">TUE</div>
+                        <div class="day">WED</div>
+                        <div class="day">THU</div>
+                        <div class="day">FRI</div>
+                        <div class="day">SAT</div>
+                    </div>
+                    <div class="dates"></div>
+                </div>
+            </div>
+        </div>
+        <script src="calender.js"></script>
+    </body>
+</html>

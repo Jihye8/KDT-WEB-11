@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let str = 'Happy Day';
+            console.log(str.length);
+            console.log(str.toUpperCase());
+            console.log(str);
+            console.log(str.toLowerCase());
+            console.log(str.indexOf('y'));
+            console.log(str.slice(3));
+            console.log(str.replace('p', 'a')); //첫번째거만
+            console.log(str.replaceAll('p', 'a')); //전체
+            console.log(str.repeat(2));
+            console.log(str.split(''));
+            console.log(str.split('y'));
+            let list = [];
+            for (let i = 0; i < 10; i++) {
+                list[i] = i + 1;
+            }
+            console.log(list);
+            list.push('end'); //11
+            console.log(list); //11 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'end']
+            list.pop(); //end 삭제됨
+            console.log(list); //10
+            list.push(); //이러면 아무것도 안들어감
+            console.log(list); // 그대로 10
+            list.unshift('front');
+            console.log(list); //11 ['front', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            list.shift(); //front 삭제됨
+            console.log(list); //10
+            list.reverse(); //거꾸로 출력됨
+            console.log(list);
+            list.reverse();
+            console.log(list.join('-')); //1-2-3-4-5-6-7-8-9-10
+
+            let numbers = ['1', '2', '3', '4', '5', '6'];
+            let fruits = ['복숭아', '사과', '바나나', '포도'];
+            for (let fruit of fruits) {
+                console.log(fruit); //배열 0부터 끝까지 하나씩 출력
+            }
+
+            numbers.forEach(function (name, index, array) {
+                console.log(name, index, array);
+            });
+            fruits.forEach(function (name, index, array) {
+                console.log(name, index, array);
+            });
+
+            let colors = ['red', 'orange', 'green', 'blue'];
+            for (let index in colors) {
+                console.log(index);
+                console.log(colors[index]);
+            }
+
+            const day = new Date();
+            console.log(day.getDay());
+        </script>
+    </body>
+</html>

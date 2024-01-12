@@ -1,29 +1,29 @@
-// // let str = 'Happy Day~!  ';
-// // console.log(str.length); //13
-// // console.log(str.toUpperCase()); //HAPPY DAY~!
-// // console.log(str.toLowerCase()); //happy day~!
-// // console.log(str.indexOf('y')); //4
-// // // 단, 첫번째 문자만 검색
-// // console.log(str.slice(2)); //ppy Day~!
-// // console.log(str.slice(2, -3)); //ppy Day~
-// // // 2번째부터 뒤에서 3번째까지 짜른다.
-// // // 음수일 때는 뒤에서부터 자른다.
-// // console.log(str.slice(5, 9)); // Day
-// // console.log(str.replace('p', 'a')); //Haapy day~!
-// // //단 첫번째 문자만 변경된다.
-// // console.log(str.replaceAll('y', 'i')); //Happi Dai~!
-// // // 전체 문자 변경
-// // console.log(str.repeat(3)); //Happy Day~!  Happy Day~!  Happy Day~!
-// // console.log(str.trim()); //Happy Day~!
-// // // 양끝의 공백 없애기
-// // console.log(str.split('')); //''안에 공백 없음
-// // // (13) ['H', 'a', 'p', 'p', 'y', ' ', 'D', 'a', 'y', '~', '!', ' ', ' ']
-// // console.log(str.split(' ')); //''안에 공백 1
-// // // (4) ['Happy', 'Day~!', '', '']
-// // console.log(str.split('p')); //p가 사라지고 p를 기준으로 나눠진다.
-// // // (3) ['Ha', '', 'y Day~!  ']
-// // console.log(str.split('Happy'));
-// // // (2) ['', ' Day~!  ']
+let str = 'Happy Day~!  ';
+console.log(str.length); //13
+console.log(str.toUpperCase()); //HAPPY DAY~!
+console.log(str.toLowerCase()); //happy day~!
+console.log(str.indexOf('y')); //4
+// 단, 첫번째 문자만 검색
+console.log(str.slice(2)); //ppy Day~!
+console.log(str.slice(2, -3)); //ppy Day~
+// 2번째부터 뒤에서 3번째까지 짜른다.
+// 음수일 때는 뒤에서부터 자른다.
+console.log(str.slice(5, 9)); // Day
+console.log(str.replace('p', 'a')); //Haapy day~!
+//단 첫번째 문자만 변경된다.
+console.log(str.replaceAll('y', 'i')); //Happi Dai~!
+// 전체 문자 변경
+console.log(str.repeat(3)); //Happy Day~!  Happy Day~!  Happy Day~!
+console.log(str.trim()); //Happy Day~!
+// 양끝의 공백 없애기
+console.log(str.split('')); //''안에 공백 없음
+// (13) ['H', 'a', 'p', 'p', 'y', ' ', 'D', 'a', 'y', '~', '!', ' ', ' ']
+console.log(str.split(' ')); //''안에 공백 1
+// (4) ['Happy', 'Day~!', '', '']
+console.log(str.split('p')); //p가 사라지고 p를 기준으로 나눠진다.
+// (3) ['Ha', '', 'y Day~!  ']
+console.log(str.split('Happy'));
+// (2) ['', ' Day~!  ']
 
 // // const color = ['red', 'orange', 'yellow'];
 

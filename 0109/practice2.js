@@ -1,7 +1,7 @@
 function add() {
     let writer = document.getElementById('writer').value;
     let content = document.getElementById('text').value;
-    let tbodt = document.getElementsByTagName(tbody);
+    let tbody = document.getElementsByTagName(tbody);
     //tr
     let tr = document.createElement('tr');
     //td
