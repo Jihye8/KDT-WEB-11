@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Callback함수</title>
+    </head>
+    <body>
+        <script>
+            // 비동기이기 때문에 2 출력을 기다리는 게 아니라 3부터 출력된다.
+            //결과 1 3 2
+            //setTimeout()
+            console.log(1);
+            setTimeout(function () {
+                console.log(2);
+            }, 2000);
+            setTimeout(() => {
+                console.log(2);
+            }, 2000);
+            console.log(3);
+
+            // 편의점에서 음료수를 사고 나오는 상황
+            function goMart() {
+                console.log('마트에서 어떤 음료를 살지 고민한다. ');
+            }
+            function pickDrink(callback) {
+                setTimeout(() => {
+                    console.log('고민끝');
+                    product = '코카콜라';
+                    price = 2000;
+                    callback(product, price); //콜백함수로 pay함수 실행 pay 함수에 변수 대입
+                }, 3000);
+            }
+            function pay(a, b) {
+                console.log(`상품명 : ${a}, 가격 : ${b}`);
+            }
+
+            let product;
+            let price;
+
+            goMart();
+            pickDrink(pay);
+            pickDrink((item1, item2) => {
+                console.log(`상품명 : ${item1}, 가격 : ${item2}`);
+            });
+            // pay(product, price);
+
+            // 출력결과
+            // 마트에서 어떤 음료를 살지 고민한다.
+            // 상품명 : undefined, 가격 : undefined
+            // 고민끝
+
+            // 콜백함수 : 함수 타입 파라미터 맨 마지막에 하나 더 선언
+            // 다른 함수가 실행을 끝낸 후 실행되는 함수
+
+            // function mainFunc(param1, param2, callback) {
+            //     console.log(param1, param2);
+            //     callback();
+            // }
+
+            // function callbackFunc() {
+            //     console.log('콜백함수 입니다.');
+            // }
+            // mainFunc(1, 2, callbackFunc);
+        </script>
+    </body>
+</html>

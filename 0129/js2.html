@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>spread 연산자</title>
+    </head>
+    <body>
+        <script>
+            const a = [1, 2, 3];
+            const b = [4, 5];
+            //배열 합치는 함수 concat
+            const concat = a.concat(b); //[1,2,3,4,5]
+            console.log(concat);
+            //spread 연산자로 배열 합치기
+            const spread = [...a, ...b];
+            console.log(spread); //[1,2,3,4,5]
+            //객체 접근해보기
+            const obj = {
+                name: '홍길동',
+                age: 18,
+                gender: 'man',
+            };
+            //접근 가능 방식
+            console.log({ ...obj });
+            console.log(obj);
+            const str = 'hello';
+            console.log(...str);
+            console.log([...str]); //문자열을 배열로 바꿔서 출력
+
+            //rest
+            const values = [10, 20, 30, 40, 50, 60, 70];
+            function get(a, b, ...rest) {
+                console.log(a);
+                console.log(b);
+                // console.log(c);
+                console.log(rest);
+            }
+            get(...values);
+            get({ ...obj });
+        </script>
+    </body>
+</html>

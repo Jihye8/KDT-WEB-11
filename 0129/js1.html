@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구조분해할당</title>
+    </head>
+    <body>
+        <script>
+            //기존방식
+            const lists = ['apple', 'grape'];
+            console.log(lists[0], lists[1]); //apple grape
+            //구조분해 - 순서가 매우 중요
+            let [item1, item2] = lists;
+            console.log(item1); //apple
+            console.log(item2); //grape
+            //새 변수 할당
+            let [i1, i2, item3 = 'peach'] = lists;
+            console.log(item3); //peach
+            //변수명으로 접근해서 value 값 변경
+            item1 = 'banana';
+            console.log(item1); //banana
+            //교환
+            let x = 1;
+            let y = 3;
+            [x, y] = [y, x];
+            console.log(x, y); //3 1
+            //객체
+            const obj = {
+                name: 'jihye',
+                age: 25,
+                gender: 'woman',
+                friend: ['승윤', '혜영', '밍하'],
+                hello: function () {
+                    console.log('hello world');
+                },
+                // 문자열로 객체의 key 값 만들 수 있다.
+                'kdt-기수': '11기',
+            };
+            //기존
+            console.log(obj.name); //jihye
+            //value 변경
+            obj.age = 29;
+            console.log(obj.age); //29
+            obj.hello(); //hello world
+            console.log(obj.friend[2]); //밍하
+            //객체 배열에 key, value 추가
+            obj.city = '서울';
+            console.log(obj.city); //서울
+            //문자열 key 값 접근하기
+            console.log(obj['kdt-기수']); //11기
+
+            //객체의 구조분해
+            const { name, city, age } = obj;
+            const { friend, hello, age: newAge } = obj;
+            console.log(name, city, age); //jihye 서울 29
+            console.log(friend, hello, newAge); //승윤 혜영 밍하 console.log('hello world') 29
+            // key 값 'age'를 'newAge'로 변경
+        </script>
+    </body>
+</html>

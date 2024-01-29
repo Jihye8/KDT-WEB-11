@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // //객체
+            // const obj = {
+            //     name: 'jihye',
+            //     age: 25,
+            //     gender: 'woman',
+            //     friend: ['승윤', '혜영', '밍하'],
+            // };
+            // function get(a, ...rest) {
+            //     console.log(a);
+            //     console.log(rest);
+            // }
+            // get({ ...obj });
+
+            function first() {
+                console.log('first');
+            }
+            function second(a) {
+                num1 = 100;
+                num2 = 200;
+                a(num1, num2);
+            }
+            function sum(a, b) {
+                console.log(a + b);
+            }
+            // let sum = sum();
+            first();
+            second(sum);
+        </script>
+    </body>
+</html>

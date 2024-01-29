@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS 클래스</title>
+    </head>
+    <body>
+        <script>
+            class Cat {
+                //생성자 - 클래스의 인스턴스 생성시 생성하는 것(선택사항)
+                constructor(name, age) {
+                    //속성
+                    this.name = name;
+                    this.age = age;
+                }
+                //메소드- 함수라고 하지 않음.. 유의하기
+                mew() {
+                    console.log(this.name, '야옹');
+                }
+                eat() {
+                    console.log(
+                        `${this.age}살 ${this.name}가 먹이를 먹습니다.`
+                    );
+                }
+            }
+            let cat1 = new Cat('나비', 1);
+            let cat2 = new Cat('냥이', 2);
+            cat1.mew(); //나비 야옹
+            cat2.eat(); //2살 냥이가 먹이를 먹습니다.
+            console.log(cat1); // {"name": "나비","age": 1}
+
+            //상속
+            class House {
+                door() {
+                    console.log('문 있음.');
+                }
+                window() {
+                    console.log('창문있음.');
+                }
+            }
+
+            const house1 = new House();
+            house1.door(); //문 있음.
+            //Apart에 House의 class 값들을 모두 사용할 수 있도록
+            //클래스 상속
+            class Apart extends House {
+                elevator() {
+                    console.log('엘베가 있음');
+                }
+            }
+
+            const apart = new Apart();
+            apart.door(); //문있음
+
+            class Shape {
+                constructor(width, height) {
+                    this.width = width;
+                    this.height = height;
+                }
+                getArea() {
+                    return this.width * this.height;
+                }
+            }
+            let rec1 = new Shape(3, 4);
+            console.log(rec1.getArea()); //12
+        </script>
+    </body>
+</html>
