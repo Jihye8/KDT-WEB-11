@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>callback을 promise로 변형</title>
+    </head>
+    <body>
+        <script>
+            // (4+3)*2-1=13
+            function add(n1, n2, cb) {
+                setTimeout(() => {
+                    let result = n1 + n2;
+                    cb(result);
+                }, 1000);
+            }
+            function mul(n, cb) {
+                setTimeout(() => {
+                    let result = n * 2;
+                    cb(result);
+                }, 1000);
+            }
+            function sub(n, cb) {
+                setTimeout(() => {
+                    let result = n - 1;
+                    cb(result);
+                }, 1000);
+            }
+
+            //callback
+            // add(4, 3, function (x) {
+            //     console.log(`1 : ${x}`); //7
+            //     mul(x, function (y) {
+            //         console.log(`2: ${y}`); //14
+            //         sub(y, function (z) {
+            //             console.log(`3:${z}`); //13
+            //         });
+            //     });
+            // });
+
+            // promise
+            function add(n1, n2) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        let result = n1 + n2;
+                        resolve(result);
+                    }, 1000);
+                });
+            }
+            function mul(n) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        let result = n * 2;
+                        resolve(result);
+                    }, 1000);
+                });
+            }
+            function sub(n) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        let result = n - 1;
+                        resolve(result);
+                    }, 1000);
+                });
+            }
+
+            add(4, 3)
+                .then((res) => {
+                    console.log('add :', res); //7
+                    //promise 체이닝으로 다음 then에 결과 값을 넣어줄 때 result가 엄청 중요..
+                    // 누구의 then인지 알려주는 역할
+                    return mul(res); //mul 함수 안에 넣어주는
+                })
+                .then((res) => {
+                    console.log('mul : ', res); //14
+                    return sub(res);
+                })
+                .then((res) => {
+                    console.log('sub : ', res); //13
+                });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //클래스
+            class Shape {
+                constructor(width, height) {
+                    this.width = width;
+                    this.height = height;
+                }
+                getArea() {
+                    return this.width * this.height;
+                }
+            }
+            class Rectangular extends Shape {
+                constructor(width, height) {
+                    super(width, height);
+                }
+                getSqur() {
+                    return Math.sqrt(this.width ** 2 + this.height ** 2);
+                }
+            }
+            let s1 = new Shape(3, 4);
+            let s2 = new Rectangular(3, 3);
+            console.log(s1.getArea());
+            console.log(s2.getSqur());
+            console.log(s2.getArea());
+        </script>
+    </body>
+</html>

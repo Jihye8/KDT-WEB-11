@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>실습3</title>
+    </head>
+    <body>
+        <script>
+            // function red() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             console.log('red');
+            //             document.body.style.backgroundColor = 'red';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            // function orange() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             console.log('orange');
+            //             document.body.style.backgroundColor = 'orange';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            // function yellow() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             console.log('yellow');
+            //             document.body.style.backgroundColor = 'yellow';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            // function green() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             console.log('green');
+            //             document.body.style.backgroundColor = 'green';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            // function blue() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             document.body.style.backgroundColor = 'blue';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            // function purple() {
+            //     return new Promise((resolve) => {
+            //         setTimeout(() => {
+            //             console.log('purple');
+            //             document.body.style.backgroundColor = 'purple';
+            //             resolve();
+            //         }, 1000);
+            //     });
+            // }
+            function changeColor(newColor) {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        console.log(newColor);
+                        document.body.style.backgroundColor = newColor;
+                        resolve();
+                    }, 1000);
+                });
+            }
+            // async function exec() {
+            //     await changeColor('red');
+            //     await changeColor('orange');
+            //     await changeColor('yellow');
+            //     await changeColor('green');
+            //     await changeColor('blue');
+            //     await changeColor('purple');
+            // }
+            // exec();
+            changeColor('red').then(() => {
+                return changeColor('orange').then(() => {
+                    return changeColor('yellow').then(() => {
+                        return changeColor('green').then(() => {
+                            return changeColor('blue').then(() => {
+                                return changeColor('purple').then();
+                            });
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
