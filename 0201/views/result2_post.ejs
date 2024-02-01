@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h4>데이터 전송 결과 페이지</h4>
+        <h5><%=title%></h5>
+        <div><span><%=userInfo.name%>님의 회원정보</span></div>
+        <div><span>성별 : <%=userInfo.gender%></span></div>
+        <div>
+            <span
+                >생년월일 : <%=userInfo.year%>년 <%=userInfo.month%>월
+                <%=userInfo.date%>일</span
+            >
+        </div>
+        <div><span>취미 : <%=userInfo.hobby%></span></div>
+        <div><span>좋아하는 색 : <%= userInfo.color%></span></div>
+        <div><span>좋아하는 숫자 : <%= userInfo.num%></span></div>
+    </body>
+</html>

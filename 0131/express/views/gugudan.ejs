@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>구구단</title>
+    </head>
+    <body>
+        <%- include('header.ejs')%>
+        <h1><%=data %>단</h1>
+        <% for(let i=1; i<10; i++){%>
+        <div><%= data%> x <%= i %> = <%= data *i %></div>
+        <% } %>
+        <hr />
+        <%for(let l=dan; l<10; l++){ %> <% for(let j= len[0];j < len.length
+        ;j++){ %>
+        <div><%=`${l} x ${j}=${l*j}`%></div>
+        <% } %> <%}%>
+    </body>
+</html>
