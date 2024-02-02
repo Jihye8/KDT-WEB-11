@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button">button</button>
+        <div style="border: 0cqb"></div>
+        <script>
+            const button = document.querySelector('button');
+            function click() {
+                console.log('click');
+            }
+            button.addEventListener('click', click); //콜백함수는 click()
+            /*callback함수
+                        function goMart() {
+                            console.log('마트에 가서 음료를 고민한다.');
+                        }
+                        function pickDrink(callback) {
+                            setTimeout(() => {
+                                console.log('고민끝');
+                                pick = {
+                                    product: '코카콜라',
+                                    price: 1400,
+                                };
+                                callback(pick);
+                            }, 3000);
+                        }
+                        function pay(pick) {
+                            console.log(`상품명 : ${pick.product} \n가격 : ${pick.price}`);
+                        }
+
+                        let pick = { product: '', price: '' };
+                        goMart();
+                        pickDrink(pay);
+                        */
+            //promise 객체
+
+            // function promise(flag) {
+            //     return new Promise(function (resolve, reject) {
+            //         if (flag) {
+            //             resolve('promise상태는 fulfilled then으로 연결');
+            //         } else {
+            //             reject('promise상태는 reject catch로 연결');
+            //         }
+            //     });
+            // }
+            // promise(false)
+            //     .then(function (result) {
+            //         console.log(result);
+            //     })
+            //     .catch(function (result) {
+            //         console.log(result);
+            //     });
+
+            // function goMart() {
+            //     console.log('마트에 가서 어떤 음료를 살지 고민한다.');
+            // }
+            // function pickDrink() {
+            //     return new Promise(function (resolve, reject) {
+            //         setTimeout(() => {
+            //             console.log('고민끝');
+            //             product = '제로콜라';
+            //             price = 3000;
+            //             resolve();
+            //         }, 3000);
+            //     });
+            // }
+            // function pay(pick) {
+            //     console.log(`상품명 : ${product} \n가격 : ${price}`);
+            // }
+            // async function exec() {
+            //     goMart();
+            //     await pickDrink();
+            //     pay();
+            // }
+            // let product;
+            // let price;
+            // exec();
+            // goMart();
+            // pickDrink().then(() => {
+            //     console.log(`상품명 : ${product} 가격 : ${price}`);
+            // });
+
+            // function call(name, cb) {
+            //     setTimeout(() => {
+            //         console.log(name);
+            //         cb(name);
+            //     }, 3000);
+            // }
+            // function back(cb) {
+            //     setTimeout(() => {
+            //         console.log('back');
+            //         cb('back');
+            //     }, 3000);
+            // }
+            // function hell(cb) {
+            //     setTimeout(() => {
+            //         console.log('hell');
+            //         cb('callback hell');
+            //     }, 3000);
+            // }
+            // call('kim', (name) => {
+            //     console.log('반가워', name);
+            //     back((txt) => {
+            //         console.log(txt, '함수 시작');
+            //         hell((message) => {
+            //             console.log(message, '다.');
+            //         });
+            //     });
+            // });
+
+            // function call(name) {
+            //     return new Promise((resolve) => {
+            //         console.log(name);
+            //         resolve(`${name}반가워`);
+            //     });
+            // }
+            // function back() {
+            //     return new Promise((resolve) => {
+            //         console.log('back');
+            //         resolve('back 함수');
+            //     });
+            // }
+            // function hell() {
+            //     return new Promise((resolve) => {
+            //         console.log('hell');
+            //         resolve('callback hell');
+            //     });
+            // }
+            // call('kim')
+            //     .then((result) => {
+            //         console.log(result);
+            //         return back();
+            //     })
+            //     .then((result) => {
+            //         console.log(result);
+            //         return hell();
+            //     })
+            //     .then((result) => {
+            //         console.log(result);
+            //     });
+        </script>
+    </body>
+</html>

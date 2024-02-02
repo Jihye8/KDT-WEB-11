@@ -5,7 +5,7 @@ const PORT = 8000;
 //body-parser
 app.use(express.urlencoded({ extended: true })); //x-www-form-urlencoded 방식
 app.use(express.json()); //json 방식
-//view engine
+//ejs 템플릿 설정
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
