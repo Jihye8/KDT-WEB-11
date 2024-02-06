@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>파일 업로드</title>
+    </head>
+    <body>
+        <form action="join-form">
+            <fieldset>
+                <legend>회원가입</legend>
+                <input type="text" name="id" placeholder="아이디" /><br />
+                <input type="password" name="pw" placeholder="비밀번호" /><br />
+                <input type="text" name="username" placeholder="이름" /><br />
+                <input type="number" name="age" placeholder="나이" /><br />
+                <input type="file" name="file" />
+                <button type="button" onclick="loginForm()">회원가입</button>
+            </fieldset>
+            <div class="result"></div>
+        </form>
+        <script>
+            function loginForm() {
+                const resultBox = document.querySelector('.result');
+                const form = document.forms['join-form'];
+                const data = {
+                    id: document.querySelector('#id').value,
+                    pw: document.querySelector('#pw').value,
+                    username: document.querySelector('#username').value,
+                    age: document.querySelector('#age').value,
+                };
+                axios({
+                    method: 'POST',
+                    url: '/axios-form',
+                    data,
+                }).then((res) => {
+                    console.log(res);
+                });
+            }
+        </script>
+    </body>
+</html>

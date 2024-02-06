@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 8000;
 
-//body-parser
+//body-parser : req의 body를 해석해서 req.body로 받을 수 있게 도와줌
 app.use(express.urlencoded({ extended: true })); //x-www-form-urlencoded 방식
 app.use(express.json()); //json 방식
 //ejs 템플릿 설정
@@ -45,13 +45,9 @@ app.post('/postForm', (req, res) => {
 //예를 들어 get방식의 '/login'과 post 방식의 '/login'은 다른 페이지지만
 // use는 동일한 페이지로 인식
 // 그래서 use는 404페이지에 주로 사용한다.
-app.use(
-    '*',
-    (req,
-    (res) => {
-        res.render('404');
-    })
-);
+app.use('*', (req, res) => {
+    res.render('404');
+});
 //서버 실행
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);

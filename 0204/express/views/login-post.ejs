@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로그인</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <form name="login-form">
+            <fieldset>
+                <legend>로그인</legend>
+                <input
+                    type="text"
+                    name="id"
+                    id="id"
+                    placeholder="아이디"
+                /><br />
+                <input
+                    type="password"
+                    name="pw"
+                    id="pw"
+                    placeholder="비밀번호"
+                />
+                <button type="button" onclick="login()">로그인</button>
+            </fieldset>
+        </form>
+        <div class="result"></div>
+        <script>
+            function login() {
+                const resultBox = document.querySelector('.result');
+                const form = document.forms['login-form'];
+                const data = {
+                    id: document.querySelector('#id').value,
+                    pw: document.querySelector('#pw').value,
+                };
+                axios({
+                    method: 'POST',
+                    url: '/axios',
+                    data: data,
+                }).then((res) => {
+                    console.log('res:', res.data);
+                    if (res.data.result === true) {
+                        resultBox.textContent = res.data.message;
+                        resultBox.style.color = 'blue';
+                    } else {
+                        resultBox.textContent = res.data.message;
+                        resultBox.style.color = 'red';
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
