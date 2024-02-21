@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <button onclick="hello()">hello</button>
+        <button onclick="study()">study</button>
+        <button onclick="bye()">bye</button>
+        <ul></ul>
+    </body>
+    <script>
+        const socket = io();
+        const ul = document.querySelector('ul');
+        function hello() {
+            console.log('클릭함');
+            socket.emit('hello_msg', 'hello!');
+            socket.on('hello_res_msg', (arg) => {
+                console.log(arg);
+                const li = document.createElement('li');
+                li.textContent = `hello버튼 : ${arg}`;
+                ul.appendChild(li);
+            });
+        }
+        function study() {
+            console.log('클릭함');
+            socket.emit('study_msg', '공부중');
+            socket.on('study_res_msg', (arg) => {
+                console.log(arg);
+                const li = document.createElement('li');
+                li.textContent = `study버튼 : ${arg}`;
+                ul.appendChild(li);
+            });
+        }
+        function bye() {
+            console.log('클릭함');
+            socket.emit('bye_msg', '그럼 안녕');
+            socket.on('bye_res_msg', (arg) => {
+                console.log(arg);
+                const li = document.createElement('li');
+                li.textContent = `bye버튼 : ${arg}`;
+                ul.appendChild(li);
+            });
+        }
+    </script>
+</html>
