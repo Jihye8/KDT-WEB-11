@@ -18,8 +18,8 @@
         const ul = document.querySelector('ul');
         function hello() {
             console.log('클릭함');
-            socket.emit('hello_msg', 'hello!');
-            socket.on('hello_res_msg', (arg) => {
+            socket.emit('hello', 'hello!');
+            socket.on('hello_res', (arg) => {
                 console.log(arg);
                 const li = document.createElement('li');
                 li.textContent = `hello버튼 : ${arg}`;
@@ -28,8 +28,8 @@
         }
         function study() {
             console.log('클릭함');
-            socket.emit('study_msg', '공부중');
-            socket.on('study_res_msg', (arg) => {
+            socket.emit('study', 'study');
+            socket.on('study_res', (arg) => {
                 console.log(arg);
                 const li = document.createElement('li');
                 li.textContent = `study버튼 : ${arg}`;
@@ -38,8 +38,8 @@
         }
         function bye() {
             console.log('클릭함');
-            socket.emit('bye_msg', '그럼 안녕');
-            socket.on('bye_res_msg', (arg) => {
+            socket.emit('bye', 'bye');
+            socket.on('bye_res', (arg) => {
                 console.log(arg);
                 const li = document.createElement('li');
                 li.textContent = `bye버튼 : ${arg}`;

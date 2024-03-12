@@ -29,7 +29,7 @@ io.on('connection', (socket) => {
         console.log('조인 후', socket.rooms);
         // 현재 접속한 브라우저를 제외한 전체 사용자의 브라우저에 메세지 전달
         socket.broadcast
-            .to(res)
+            .to(socket.chatRoom)
             .emit('create', '새로운 브라우저가 입장하였습니다.');
     });
     // 특정 방에 메세지 보내기 가능

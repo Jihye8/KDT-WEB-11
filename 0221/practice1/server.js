@@ -19,17 +19,17 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
     console.log('조인전', socket);
     // 이벤트를 받는 쪽
-    socket.on('hello_msg', (arg) => {
+    socket.on('hello', (arg) => {
         console.log(arg);
-        socket.emit('hello_res_msg', 'Hello! How are you?');
+        socket.emit('hello_res', '안녕하세요!');
     });
-    socket.on('study_msg', (arg) => {
+    socket.on('study', (arg) => {
         console.log(arg);
-        socket.emit('study_res_msg', '열공하세요');
+        socket.emit('study_res', '열공하세요');
     });
-    socket.on('bye_msg', (arg) => {
+    socket.on('bye', (arg) => {
         console.log(arg);
-        socket.emit('bye_res_msg', '그래 안녕');
+        socket.emit('bye_res', '안녕');
     });
 });
 
