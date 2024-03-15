@@ -1,4 +1,5 @@
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
+
 export default function FunctionComponent({name, time, children}) {
     // const {name, time} = props
   return (
@@ -11,7 +12,7 @@ export default function FunctionComponent({name, time, children}) {
 }
 
 FunctionComponent.defaultProps = {
-    name : 홍길동
+    name : "홍길동"
 }
 
 FunctionComponent.propTypes = {
