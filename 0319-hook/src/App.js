@@ -4,6 +4,8 @@ import UseMemoEx from './components/UseMemoEx';
 import UseCallbackEx from './components/UseCallbackEx';
 import UseReducerEx from './components/UseReducerEx';
 import Faq from './components/Faq';
+import Form from './components/Form';
+import FormEx from './components/FormEx';
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
       < UseReducerEx/>
       <hr />
       <Faq />
+      <hr />
+      <Form />
+      <hr />
+      <FormEx />
     </div>
   );
 }
