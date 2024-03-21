@@ -1,0 +1,8 @@
+// - 믹스인(함수) 정의(선언)
+@mixin box($size){
+    width: $size;
+    height: $size;
+}
+@mixin bk($color){
+    background-color: $color;
+}

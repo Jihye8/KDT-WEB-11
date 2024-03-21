@@ -1,0 +1,60 @@
+// SASS styling
+
+@import './variables';
+@import './utiles';
+
+// - 변수 선언 : $ 키워드 사용
+// $color-red : red;
+// $color-orange : orange;
+// $color-yellow : yellow;
+
+// // - 믹스인(함수) 정의(선언)
+// @mixin box($size){
+//     width: $size;
+//     height: $size;
+// }
+// @mixin bk($color){
+//     background-color: $color;
+// }
+
+// - 중첩 : 부모 자식 관계 표현
+.container {
+    display: flex;
+    justify-content: center;
+    .box{
+        // width: 100px;
+        // 믹스인 호출 - 전에 선언한 폼 사용하기! 변수에 값 할당 가능
+        @include box(150px);
+        
+        // .box .red가 동등한 관계임을 표시하는 '&'
+        &.red{
+            @include bk(red)
+        }
+        
+        &.orange{
+            background-color: $color-orange;
+        }
+
+        &.yellow{
+            background-color: $color-yellow;
+        }
+        &:hover{
+            // -연산 가능
+            // $animation-duration : 0.4s
+            $box-animation : $animation-duration *2;
+            transform: translateY(20px);
+            transition: transform $box-animation;
+        }
+    }
+}
+.btn{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.btn-primary{
+    // - 확장 : 기존 선택자 스타일을 다른 선택자에게 상속
+    @extend .btn;
+    background-color: plum;
+}

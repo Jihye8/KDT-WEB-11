@@ -1,0 +1,31 @@
+.box {
+    border-radius: 20px;
+    width: 60vw;
+}
+.bk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .wrap {
+        background-color: rgb(202, 226, 235);
+        width: 80vw;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .title-box {
+            background-color: rgb(111, 178, 203);
+            @extend .box
+        }
+        .id-box {
+            background-color: rgb(250, 245, 245);
+            text-align: left;
+            @extend .box;
+            margin-bottom :10px;
+            padding : 10px
+        }
+    }
+}

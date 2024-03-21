@@ -1,0 +1,46 @@
+@mixin circle() {
+    width:50px ;
+    height: 50px;
+    border-radius: 50%;
+}
+@mixin ani($x, $y){
+    position: relative;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    @keyframes move{
+        0%   {top: 0px; left: 0px; }
+        25%  {top: 0px; left: $x; }
+        50%  {top: $y; left: $x; }
+        75%  {top: $y; left: 0px; }
+        100% {top: 0px; left: 0px; }
+    }
+}
+
+$bk-1 : pink;
+$bk-2 : yellow;
+$bk-3 : green;
+
+
+
+.wrap{
+    position: relative;
+    .circle{
+        @include circle();
+        &.circle-1 {
+            background-color: $bk-1;
+            @include ani(100px, 100px)
+        }
+        &.circle-2 {
+            background-color: $bk-2;
+            @include ani(200px, 200px)
+        }
+        &.circle-3 {
+            background-color: $bk-3;
+            @include ani(300px, 300px)
+        }
+    
+    }
+    
+}

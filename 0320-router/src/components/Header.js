@@ -9,6 +9,7 @@ export default function header() {
             {/* Link - 컴포넌트 경로를 바꿔준다. */}
             <li><Link to="/">Home</Link></li>
             <li><Link to="/products">Products</Link></li>
+            <li><Link to='/students'>Students</Link></li>
         </ul>
    </header>
   )
